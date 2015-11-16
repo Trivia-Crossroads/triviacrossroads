@@ -6,3 +6,5 @@ function ExistingProfiles(name, email, neighborhood, day, specialty){
   this.specialty = specialty;
 }
 
+var profileList = [];
+
