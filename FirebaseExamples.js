@@ -10,7 +10,8 @@ fbPerson.on("value", function(snapshot) {
 
 //Example of pushing new content to People
 //Do NOT use .set, as it will overwrite all existing data with what you're setting.
-fbPerson.push({name: 'Selena', gender: 'female'});
+var UUID = fbPerson.push({name: 'Selena', gender: 'female'});
+document.cookie="UUID=" + UUID.key() + "; expires=Thu, 18 Dec 2016 12:00:00 UTC";
 
 // By setting the URL to a specific FB UUID, we can access that object directly
 //var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person/-K3H95UMwdDSzN0ZbH9d');
