@@ -1,3 +1,4 @@
+
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 
 function ExistingProfiles(name, email, neighborhood, day, specialty){
@@ -9,6 +10,7 @@ function ExistingProfiles(name, email, neighborhood, day, specialty){
 }
 
 var profileList = [];
+
 var parsedProfileList = [];
 
 fbPerson.orderByChild("name").on("child_added", function(snapshot) {
