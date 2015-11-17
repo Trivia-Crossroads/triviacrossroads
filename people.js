@@ -10,12 +10,21 @@ function ExistingProfiles(name, email, neighborhood, day, specialty){
 
 var profileList = [];
 var parsedProfileList = [];
+var profiles = [];
 
-fbPerson.orderByChild("name").on("child_added", function(snapshot) {
-  profileList.push(snapshot.val());
-  parsedProfileList.push(JSON.parse(profileList.pop()));
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
+fbPerson.once("value", function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    parsedProfileList.push(JSON.parse(childSnapshot.val()));
+  });
+  var table = document.getElementById('profileDisplay');
+  for(var i = 0; i < parsedProfileList.length; i++){
+    var tr = document.createElement('tr');
+
+    for(var j in parsedProfileList[i]){
+      var td = document.createElement('td');
+      td.textContent = parsedProfileList[i][j];
+      tr.appendChild(td);
+    }
+  table.appendChild(tr);
+  }
 });
-
-
