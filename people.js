@@ -21,7 +21,11 @@ function generateTable(dataArray){
 
 function sortDay(e){
   var pickedDay = timeDrop.options[timeDrop.selectedIndex].text;
-  sortArray = profileList.filter(function av(v){return v.day === pickedDay;});
+  if (pickedDay == "--"){
+    sortArray = profileList;
+  } else {
+    sortArray = profileList.filter(function av(v){return v.day === pickedDay;});
+  }
   generateTable(sortArray);
 }
 
