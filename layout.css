@@ -29,6 +29,7 @@ body {
   background-color: #36b0b6;
   border-radius: 5px;
   margin: 5px;
+  max-width: 400px;
 }
 .footer {
   background-color: #36b0b6;
