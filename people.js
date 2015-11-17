@@ -32,10 +32,18 @@ function sortDay(e){
 
 function sortSpecialty(e){
   var pickedSpecialty = specialtyDrop.options[specialtyDrop.selectedIndex].text;
+  if (pickedSpecialty === 'Sorcery, Phrenology, and Chiromancy') {
+    pickedSpecialty = 'Sorcery';
+  }
   if (pickedSpecialty == "--"){
     sortArray = profileList;
   } else {
+    console.log(profileList);
     sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
+    console.log(sortArray);
+    profileList.filter(function av(v){console.log(v.specialty);});
+    // console.log(v.specialty);
+    console.log(pickedSpecialty);
   }
   generateTable(sortArray);
 }
