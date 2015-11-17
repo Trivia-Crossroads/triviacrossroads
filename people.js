@@ -1,6 +1,7 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileList = [];
 var timeDrop = document.getElementById('time');
+var specialtyDrop = document.getElementById('specialty');
 
 function generateTable(dataArray){
   var table = document.getElementById('profileDisplay');
@@ -29,6 +30,24 @@ function sortDay(e){
   generateTable(sortArray);
 }
 
+function sortSpecialty(e){
+  var pickedSpecialty = specialtyDrop.options[specialtyDrop.selectedIndex].text;
+  if (pickedSpecialty === 'Sorcery, Phrenology, and Chiromancy') {
+    pickedSpecialty = 'Sorcery';
+  }
+  if (pickedSpecialty == "--"){
+    sortArray = profileList;
+  } else {
+    console.log(profileList);
+    sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
+    console.log(sortArray);
+    profileList.filter(function av(v){console.log(v.specialty);});
+    // console.log(v.specialty);
+    console.log(pickedSpecialty);
+  }
+  generateTable(sortArray);
+}
+
 
 fbPerson.once("value", function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
@@ -37,5 +56,6 @@ fbPerson.once("value", function(snapshot) {
   var sortArray = [];
   generateTable(profileList);
   timeDrop.addEventListener('change', sortDay);
+  specialtyDrop.addEventListener('change', sortSpecialty);
 });
 
