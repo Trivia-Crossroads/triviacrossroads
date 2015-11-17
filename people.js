@@ -10,7 +10,6 @@ function ExistingProfiles(name, email, neighborhood, day, specialty){
 
 var profileList = [];
 var parsedProfileList = [];
-var profiles = [];
 
 fbPerson.once("value", function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
