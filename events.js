@@ -39,9 +39,30 @@ var eventList = [
   new Event("Earl's on the Ave", "University District", "Thursday", "9p"),
 ];
 
-var para = document.createElement('p');
-var node = document.createTextNode(eventList[0].name);
-para.appendChild(node);
+for (i = 0; i < eventList.length; i++){
 
-var element = document.getElementById('event');
-element.appendChild(para);
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].name);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].location);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].day);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].time);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+}
+
