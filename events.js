@@ -1,7 +1,8 @@
+var dayFilter = document.getElementById('dayFilter');
 function Event(name, location, day, time, fee){
   this.name = name;
   this.location = location;
-  this.day = day,
+  this.day = day;
   this.time = time;
   this.fee = fee;
 }
@@ -39,15 +40,36 @@ var eventList = [
   new Event("Earl's on the Ave", "University District", "Thursday", "9p"),
 ];
 
-var eventTable = document.getElementById('eventTable');
-  for(var i = 0; i < eventList.length; i++){
-    var tr = document.createElement('tr');
-
-    for(var j in eventList[i]){
-      var td = document.createElement('td');
-      td.textContent = eventList[i][j];
-      tr.appendChild(td);
+function filterDay(event) {
+  var pickedDay = dayFilter.options[dayFilter.selectedIndex].text;
+  if(pickedDay === '--') {
+    makeTable(eventList)
+  } else {
+    var sortedArray = [];
+    sortedArray = eventList.filter(isEqualTo);
+    function isEqualTo(v) {
+      return v.day === pickedDay
     }
-  eventTable.appendChild(tr);
+    makeTable(sortedArray);
+ }
 }
 
+function makeTable(tableData) {
+
+  var eventTable = document.getElementById('eventTable');
+  var newTable = document.createElement('tbody');
+  for(var i = 0; i < tableData.length; i++){
+    var tr = document.createElement('tr');
+    for(var j in tableData[i]){
+      var td = document.createElement('td');
+      td.textContent = tableData[i][j];
+      tr.appendChild(td);
+    }
+  newTable.appendChild(tr);
+  }
+  eventTable.appendChild(newTable);
+  eventTable.removeChild(newTable.previousSibling);
+
+}
+makeTable(eventList);
+dayFilter.addEventListener('change', filterDay);
