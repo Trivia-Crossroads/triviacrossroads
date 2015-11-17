@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+
+var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
+
 function ExistingProfiles(name, email, neighborhood, day, specialty){
   this.name = name;
   this.email = email;
@@ -8,6 +10,14 @@ function ExistingProfiles(name, email, neighborhood, day, specialty){
 }
 
 var profileList = [];
-=======
->>>>>>> 02985d5010443e789c8d7f3151b0575764699592
+
+var parsedProfileList = [];
+
+fbPerson.orderByChild("name").on("child_added", function(snapshot) {
+  profileList.push(snapshot.val());
+  parsedProfileList.push(JSON.parse(profileList.pop()));
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+
 

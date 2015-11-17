@@ -4,7 +4,7 @@
   <title>Your Profile</title>
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="style.css">
-  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
 </head>
 <body>
   <header>
@@ -26,19 +26,19 @@
 
   </header>
     <h1>Join Trivia Crossroads!</h1>
-    <form>
+    <form id="profileData">
       <fieldset>
         <legend>
           Contact Information:
         </legend>
         <label>
           Name:
-          <input type="text" name="name" size="30" maxlength="100">
+          <input type="text" name="name" size="30" maxlength="100" required>
         </label>
         <br />
         <label>
           Email:
-          <input type="email" name="email" size="30" maxlength="100">
+          <input type="email" name="email" size="30" maxlength="100" required>
         </label>
         <br />
       </fieldset>
@@ -51,7 +51,7 @@
           <label for="location">
             Where would you like to play?
           </label>
-          <select name="location-list" id="locations">
+          <select name="location" id="locations">
             <option value="Ballard">Ballard</option>
             <option value="Wallingford">Wallingford</option>
             <option value="Capitol Hill">Capitol Hill</option>
@@ -60,10 +60,10 @@
             <option value="Anywhere">Anywhere in Seattle</option>
           </select>
           <br />
-          <label for="times">
+          <label for="time">
             When are you available to play?
           </label>
-          <select name="times-list" id="times">
+          <select name="time" id="times">
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
             <option value="Wednesday">Wednesday</option>
@@ -83,7 +83,7 @@
           <label for="specialty">
             Do you have a trivia specialty?
           </label>
-          <select name="specialty-list" id="specialties">
+          <select name="specialty" id="specialties">
             <option value="No">No, not really</option>
             <option value="sports">Sports</option>
             <option value="pop">Pop Culture</option>
@@ -96,12 +96,11 @@
           </select>
         </p>
         <p>
-          <label for="comments">
+          <label for="comment">
             Would you like to add anything about yourself?
           </label>
           <br />
-          <textarea rows="4" cols="40" id="comments">
-          </textarea>
+          <textarea name="comment" rows="4" cols="40" id="comments"></textarea>
         </p>
         <br />
         <input type="submit" value="Submit!" />
