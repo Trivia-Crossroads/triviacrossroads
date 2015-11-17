@@ -28,9 +28,22 @@
         <h1>
           Local Trivia Events
           </h1>
-          <div id="event">
-          <p id="p1"></p>
-        </div>
+        <form id="filter">
+          <label>Sort by day </label>
+          <select name="dayFilter" id="dayFilter">
+            <option value="all">--</option>
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+          <input type="submit">
+
+        </form>
+
         <table id="eventTable">
         </table>
 
