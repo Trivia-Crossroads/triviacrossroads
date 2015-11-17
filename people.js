@@ -1,6 +1,7 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileList = [];
 var timeDrop = document.getElementById('time');
+var specialtyDrop = document.getElementById('specialty');
 
 function generateTable(dataArray){
   var table = document.getElementById('profileDisplay');
@@ -29,6 +30,16 @@ function sortDay(e){
   generateTable(sortArray);
 }
 
+function sortSpecialty(e){
+  var pickedSpecialty = specialtyDrop.options[specialtyDrop.selectedIndex].text;
+  if (pickedSpecialty == "--"){
+    sortArray = profileList;
+  } else {
+    sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
+  }
+  generateTable(sortArray);
+}
+
 
 fbPerson.once("value", function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
@@ -37,5 +48,6 @@ fbPerson.once("value", function(snapshot) {
   var sortArray = [];
   generateTable(profileList);
   timeDrop.addEventListener('change', sortDay);
+  specialtyDrop.addEventListener('change', sortSpecialty);
 });
 
