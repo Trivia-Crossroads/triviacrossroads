@@ -109,3 +109,14 @@
   box-shadow: inset 0 5px 10px #133e40;
 }
 /*end of copied code for nav bar*/
+
+#logo {
+  font-size: 80px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: green;
+  font-family: 'Chewy', cursive;
+}
+
+
