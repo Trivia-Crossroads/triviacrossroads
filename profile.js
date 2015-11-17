@@ -16,8 +16,8 @@ function onSubmit(event) {
   var time = event.target.time.value;
   var specialty = event.target.specialty.value;
   var comment = event.target.comment.value;
-
-  var UUID = fbPerson.push(new NewProfile(name, email, location, time, specialty, comment));
+  var profileString = JSON.stringify(new NewProfile(name, email, location, time, specialty, comment));
+  var UUID = fbPerson.push(profileString);
   document.cookie="UUID=" + UUID.key() + "; expires=Thu, 25 Dec 2020 12:00:00 UTC";
 }
 
