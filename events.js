@@ -19,8 +19,8 @@ var eventList = [
   new Event("Pies and Pints", "Roosevelt", "Tuesday", "8p"),
   new Event("Tarasco", "Ballard", "Tuesday", "8p"),
   new Event("The Old Pequiliar", "Ballard", "Tuesday", "7p"),
-  new Event("The Park Pub", "Phinney Ridge", "Tuesday" "8p"),
-  new Event("The Retro Restaurant and Lounge", "Belltown", "Tuesday" "8p"),
+  new Event("The Park Pub", "Phinney Ridge", "Tuesday", "8p"),
+  new Event("The Retro Restaurant and Lounge", "Belltown", "Tuesday", "8p"),
   new Event("Celtic Swell", "West Seattle", "Tuesday", "8:30p"),
   new Event("The Lookout", "Capitol Hill", "Tuesday", "7p"),
   new Event("95 Slide", "Capitol Hill", "Wednesday", "8p"),
@@ -38,3 +38,31 @@ var eventList = [
   new Event("The Ould Triangle", "Greenwood", "Thursday", "8:30p"),
   new Event("Earl's on the Ave", "University District", "Thursday", "9p"),
 ];
+
+for (i = 0; i < eventList.length; i++){
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].name);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].location);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].day);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+
+  var para = document.createElement('p');
+  var node = document.createTextNode(eventList[i].time);
+  para.appendChild(node);
+  var element = document.getElementById('event');
+  element.appendChild(para);
+}
+
