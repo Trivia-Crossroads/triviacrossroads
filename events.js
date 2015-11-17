@@ -38,3 +38,10 @@ var eventList = [
   new Event("The Ould Triangle", "Greenwood", "Thursday", "8:30p"),
   new Event("Earl's on the Ave", "University District", "Thursday", "9p"),
 ];
+
+var para = document.createElement('p');
+var node = document.createTextNode(eventList[0].name);
+para.appendChild(node);
+
+var element = document.getElementById('event');
+element.appendChild(para);
