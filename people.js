@@ -17,5 +17,3 @@ fbPerson.orderByChild("name").on("child_added", function(snapshot) {
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
-
-
