@@ -9,6 +9,36 @@ body {
   flex-flow: row wrap;
 }
 
+/*#logo {
+  justify-content: flex-start;
+}*/
+
+#headline {
+ /*  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   position: relative;
+   margin: -12px;
+}
+
+#headlineImg {
+  position: relative;
+  top: 21px;
+  left: -284px;
+}
+
+#headlineText {
+  position: relative;
+  top: -27px;
+  left: 40px;
+  margin: -29px;
+}
+
 /* We tell all items to be 100% width */
 .header, .main, .nav, .aside, .footer {
   flex: 1 100%;
@@ -16,8 +46,10 @@ body {
 .header {
   background-color: silver;
   border-radius: 5px;
-  font-size: 40px;
-  padding-top: 10px;
+  /*font-size: 40px;*/
+ /* padding-top: 10px;
+  padding-left: 20px;*/
+  /*height: 1px;*/
 }
 .main {
   font-weight: normal;
