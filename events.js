@@ -1,5 +1,7 @@
 var dayFilter = document.getElementById('dayFilter');
 var locationFilter = document.getElementById('locations');
+var toggle = document.getElementById('toggle');
+
 function Event(name, location, day, time, fee){
   this.name = name;
   this.location = location;
@@ -62,7 +64,6 @@ function filterlocation(event) {
 }
 
 function makeTable(tableData) {
-
   var eventTable = document.getElementById('eventTable');
   var newTable = document.createElement('tbody');
   for(var i = 0; i < tableData.length; i++){
@@ -76,8 +77,22 @@ function makeTable(tableData) {
   }
   eventTable.appendChild(newTable);
   eventTable.removeChild(newTable.previousSibling);
+}
 
+function toggleEvents(event){
+  if (event.target.id == 'toggleDay') {
+    dayFilter.removeAttribute('class', 'hidden');
+    document.getElementById('toggleDay').setAttribute('class', 'highlight');
+    document.getElementById('toggleLocation').removeAttribute('class', 'highlight');
+    locationFilter.setAttribute('class', 'hidden');
+    dayFilter.addEventListener('change', filterDay);
+  }else if(event.target.id == 'toggleLocation'){
+    locationFilter.removeAttribute('class', 'hidden');
+    document.getElementById('toggleLocation').setAttribute('class', 'highlight');
+    document.getElementById('toggleDay').removeAttribute('class', 'highlight');
+    dayFilter.setAttribute('class', 'hidden');
+    locationFilter.addEventListener('change', filterlocation);
+  }
 }
 makeTable(eventList);
-dayFilter.addEventListener('change', filterDay);
-locationFilter.addEventListener('change', filterlocation);
+toggle.addEventListener('click', toggleEvents)
