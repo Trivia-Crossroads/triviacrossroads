@@ -3,6 +3,9 @@ body {
   text-align: center;
 }
 
+h5 {
+  text-align: right;
+}
 /*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 .wrapper {
   display: flex;
@@ -54,6 +57,7 @@ body {
   background-color: silver;
   border-radius: 5px;
   margin: 10px;
+  min-width: 300px;
 }
 .aside {
   background-color: #36b0b6;

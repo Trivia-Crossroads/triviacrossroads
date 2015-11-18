@@ -6,7 +6,7 @@ var locationDrop = document.getElementById('locations');
 var toggle = document.getElementById('toggle');
 
 var display = {
-  generateTable: function(dataArray){
+   generateTable: function(dataArray){
     var table = document.getElementById('profileDisplay');
     var tbody = document.createElement('tbody');
     for(var i = 0; i < dataArray.length; i++){
@@ -91,4 +91,3 @@ var sort = {
 
 display.storagePull();
 toggle.addEventListener('click', display.togglePeople);
-
