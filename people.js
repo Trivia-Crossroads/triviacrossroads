@@ -25,18 +25,35 @@ var display = {
 
   togglePeople: function(event){
     display.generateTable(profileList);
+    var dayButton = document.getElementById('dayButton');
+    var specButton = document.getElementById('specialtyButton');
+    var locButton = document.getElementById('locationButton');
     if (event.target.id == 'dayButton') {
       dayDrop.removeAttribute('class', 'hidden');
       specialtyDrop.setAttribute('class', 'hidden');
       locationDrop.setAttribute('class', 'hidden');
+
+      dayButton.setAttribute('class', 'highlight');
+      specButton.removeAttribute('class', 'highlight');
+      locButton.removeAttribute('class', 'highlight');
+
     } else if (event.target.id == 'specialtyButton') {
       specialtyDrop.removeAttribute('class', 'hidden');
       dayDrop.setAttribute('class', 'hidden');
       locationDrop.setAttribute('class', 'hidden');
+
+      specButton.setAttribute('class', 'highlight');
+      dayButton.removeAttribute('class', 'highlight');
+      locButton.removeAttribute('class', 'highlight');
+
     } else if (event.target.id == 'locationButton') {
       locationDrop.removeAttribute('class', 'hidden');
       dayDrop.setAttribute('class', 'hidden');
       specialtyDrop.setAttribute('class', 'hidden');
+
+      locButton.setAttribute('class', 'highlight');
+      dayButton.removeAttribute('class', 'highlight');
+      specButton.removeAttribute('class', 'highlight');
     }
   },
 
