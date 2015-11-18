@@ -54,6 +54,7 @@ body {
   background-color: silver;
   border-radius: 5px;
   margin: 10px;
+  min-width: 300px;
 }
 .aside {
   background-color: #36b0b6;
