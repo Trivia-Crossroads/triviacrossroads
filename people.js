@@ -2,6 +2,8 @@ var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileList = [];
 var timeDrop = document.getElementById('time');
 var specialtyDrop = document.getElementById('specialty');
+var neighborhoodDrop = document.getElementById('neighborhood');
+
 
 function generateTable(dataArray){
   var table = document.getElementById('profileDisplay');
@@ -38,12 +40,19 @@ function sortSpecialty(e){
   if (pickedSpecialty == "--"){
     sortArray = profileList;
   } else {
-    console.log(profileList);
     sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
-    console.log(sortArray);
-    profileList.filter(function av(v){console.log(v.specialty);});
-    // console.log(v.specialty);
-    console.log(pickedSpecialty);
+  profileList.filter(function av(v){console.log(v.specialty);});
+
+  }
+  generateTable(sortArray);
+}
+
+function sortNeighborhood(e){
+  var pickedNeighborhood = neighborhoodDrop.options[neighborhoodDrop.selectedIndex].text;
+  if (pickedNeighborhood == "--"){
+    sortArray = profileList;
+  } else {
+    sortArray = profileList.filter(function av(v){return v.neighborhood === pickedNeighborhood;});
   }
   generateTable(sortArray);
 }
@@ -53,9 +62,11 @@ fbPerson.once("value", function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
     profileList.push(JSON.parse(childSnapshot.val()));
   });
-  var sortArray = [];
   generateTable(profileList);
+  var sortArray = [];
   timeDrop.addEventListener('change', sortDay);
   specialtyDrop.addEventListener('change', sortSpecialty);
+  neighborhoodDrop.addEventListener('change', sortNeighborhood);
+
 });
 
