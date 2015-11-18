@@ -28,9 +28,12 @@
         <h1>
           Local Trivia Events
           </h1>
+      <div id="toggle">
+        <button type="button" id="toggleDay">Day</button>
+        <button type="button" id="toggleLocation">Location</button>
+      </div>
         <form id="filter">
-          <label>Sort by day </label>
-          <select name="dayFilter" id="dayFilter">
+          <select name="dayFilter" id="dayFilter" class="hidden">
             <option value="all">--</option>
             <option value="sunday">Sunday</option>
             <option value="monday">Monday</option>
@@ -40,8 +43,7 @@
             <option value="friday">Friday</option>
             <option value="saturday">Saturday</option>
           </select>
-          <label for="location">Sort By Location</label>
-          <select name="location" id="locations">
+          <select name="location" id="locations" class="hidden">
             <option value="all">--</option>
             <option value="Ballard">Ballard</option>
             <option value="Wallingford">Wallingford</option>
