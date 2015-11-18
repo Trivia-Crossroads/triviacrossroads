@@ -130,4 +130,17 @@ header h1 {
   background-color: green;
 }
 
+tbody tr:nth-child(odd) {
+  background: LightGray;
+}
+
+tbody tr:nth-child(even) {
+  background: Silver;
+}
+
+#tableStyle {
+  display: flex;
+  justify-content: center;
+}
+
 
