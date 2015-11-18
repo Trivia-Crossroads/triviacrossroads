@@ -33,6 +33,7 @@ h5 {
   position: relative;
   top: 21px;
   left: -284px;
+  margin-bottom: 15px;
 }
 
 #headlineText {
@@ -40,6 +41,7 @@ h5 {
   top: -27px;
   left: 40px;
   margin: -29px;
+  margin-bottom: 30px;
 }
 
 /* We tell all items to be 100% width */

@@ -144,3 +144,9 @@ tbody tr:nth-child(even) {
 }
 
 
+#eventPicture {
+  background-image: url('img/BallardLoft.jpg');
+  background-size: cover;
+  width: 100%;
+  margin: 0%;
+}
