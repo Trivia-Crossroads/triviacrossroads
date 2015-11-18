@@ -6,6 +6,21 @@ body {
 h5 {
   text-align: right;
 }
+
+#didyouknow {
+  background-color: Lightgray;
+  font-size: 20px;
+  margin: 10%;
+  border-radius: 8px;
+}
+
+#fun {
+  background-color: Lightgray;
+  font-size: 20px;
+  margin: 5%;
+  border-radius: 8px;
+}
+
 /*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 .wrapper {
   display: flex;
