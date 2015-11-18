@@ -10,6 +10,8 @@ function NewProfile(name, email, location, day, specialty, other){
 }
 
 function onSubmit(event) {
+  event.preventDefault();
+  response.removeAttribute('class', 'hidden');
   var name = event.target.name.value;
   var email = event.target.email.value;
   var location = event.target.location.value;
