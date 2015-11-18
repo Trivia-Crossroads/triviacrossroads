@@ -2,15 +2,88 @@
 <html>
 <head>
   <title>Find Teammates!</title>
+  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="style.css">
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 </head>
 <body>
-  <header>
-    <nav></nav>
-  </header>
-  <footer></footer>
+  <div class="wrapper">
+    <header class="header">
+      <div id="headline">
+        <img id="headlineImg" src="img/logo.png">
+        <h1 id="headlineText">
+          Trivia Crossroads
+        </h1>
+      </div>
+      <nav>
+          <div id='cssmenu'>
+            <ul>
+               <li><a href='index.html'><span>Home</span></a></li>
+               <li><a href='about.html'><span>About</span></a></li>
+               <li><a href='events.html'><span>Events</span></a></li>
+               <li class='active'><a href='people.html'><span>People</span></a></li>
+               <li class='last'><a href='profile.html'><span>Sign Up</span></a></li>
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <article class="main">
+      <div>
+        <fieldset id="filterbar">
+          <legend>Filter By:</legend>
+          <div id="toggle">
+            <button type= "button" id="dayButton">Day</button>
+            <button type= "button" id="specialtyButton">Specialty</button>
+            <button type= "button" id="locationButton">Location</button>
+          </div>
+          <select name="day" id="day" class="hidden">
+            <option value="all">--</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+            <select name="specialty" id="specialty" class="hidden">
+              <option value="all">--</option>
+              <option value="Sports">Sports</option>
+              <option value="Music">Music</option>
+              <option value="History">History</option>
+              <option value="Science">Science</option>
+              <option value="Sorcery">Sorcery, Phrenology, and Chiromancy</option>
+              <option value="Phenomenology">Phenomenology</option>
+            </select>
+          <select name="location" id="locations" class="hidden">
+            <option value="all">--</option>
+            <option value="Ballard">Ballard</option>
+            <option value="Wallingford">Wallingford</option>
+            <option value="Capitol Hill">Capitol Hill</option>
+            <option value="Lower Queen Anne">Lower Queen Anne</option>
+            <option value="University District">University District</option>
+          </select>
+        </fieldset>
+      </div>
+      <div >
+        <table id="profileDisplay">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Neighborhood</th>
+            <th>Availability</th>
+            <th>Specialty</th>
+          </tr>
+        </thead>
+        </table>
+      </div>
+    </article>
+      <footer class="footer">
+        <h5>&copy; Nov 2015 NSA ... We're watching you!</h5>
+      </footer>
+  </div>
 <script src="people.js" type="text/javascript"></script>
 </body>
 </html>

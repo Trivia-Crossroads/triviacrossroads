@@ -1,0 +1,101 @@
+body {
+  font-weight: bold;
+  text-align: center;
+}
+
+h5 {
+  text-align: right;
+}
+/*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*#logo {
+  justify-content: flex-start;
+}*/
+
+#headline {
+ /*  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   position: relative;
+   margin: -12px;
+}
+
+#headlineImg {
+  position: relative;
+  top: 21px;
+  left: -284px;
+  margin-bottom: 15px;
+}
+
+#headlineText {
+  position: relative;
+  top: -27px;
+  left: 40px;
+  margin: -29px;
+  margin-bottom: 30px;
+}
+
+/* We tell all items to be 100% width */
+.header, .main, .nav, .aside, .footer {
+  flex: 1 100%;
+}
+.header {
+  background-color: silver;
+  border-radius: 5px;
+ /* padding-top: 10px;
+  padding-left: 20px;*/
+}
+.main {
+  font-weight: normal;
+  background-color: silver;
+  border-radius: 5px;
+  margin: 10px;
+  min-width: 300px;
+}
+.aside {
+  background-color: #36b0b6;
+  border-radius: 5px;
+  margin: 5px;
+  max-width: 400px;
+}
+.footer {
+  background-color: #36b0b6;
+  border-radius: 5px;
+  margin: 5px;
+}
+/* We rely on source order for mobile-first approach
+ * in this case:
+ * 1. header
+ * 2. nav
+ * 3. main
+ * 4. aside
+ * 5. footer
+ */
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .aside { flex: 1 auto; }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars
+   */
+  .main { flex: 2 0px; }
+
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
