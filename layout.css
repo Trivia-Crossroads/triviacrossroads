@@ -1,6 +1,7 @@
 body {
   font-weight: bold;
   text-align: center;
+  font-family: 'Handlee', cursive;
 }
 
 /*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
