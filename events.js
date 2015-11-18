@@ -46,11 +46,7 @@ function filterDay(event) {
   if(pickedDay === '--') {
     makeTable(eventList)
   } else {
-    var sortedArray = [];
-    sortedArray = eventList.filter(isEqualTo);
-    function isEqualTo(v) {
-      return v.day === pickedDay
-    }
+    var sortedArray = eventList.filter(function isEqualTo(v){return v.day === pickedDay});
     makeTable(sortedArray);
  }
 }
@@ -60,11 +56,7 @@ function filterlocation(event) {
   if(pickedLocation === '--') {
     makeTable(eventList)
   } else {
-    var sortedArray = [];
-    sortedArray = eventList.filter(isEqualTo);
-    function isEqualTo(v) {
-      return v.location === pickedLocation
-    }
+    var sortedArray = eventList.filter(function isEqualTo(v){return v.location === pickedLocation});
     makeTable(sortedArray);
  }
 }
