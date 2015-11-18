@@ -46,10 +46,8 @@ body {
 .header {
   background-color: silver;
   border-radius: 5px;
-  /*font-size: 40px;*/
  /* padding-top: 10px;
   padding-left: 20px;*/
-  /*height: 1px;*/
 }
 .main {
   font-weight: normal;
