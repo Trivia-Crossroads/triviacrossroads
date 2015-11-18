@@ -2,7 +2,7 @@ var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileList = [];
 var timeDrop = document.getElementById('time');
 var specialtyDrop = document.getElementById('specialty');
-var neighborhoodDrop = document.getElementById('neighborhood');
+var locationDrop = document.getElementById('locations');
 
 
 function generateTable(dataArray){
@@ -41,32 +41,32 @@ function sortSpecialty(e){
     sortArray = profileList;
   } else {
     sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
-  profileList.filter(function av(v){console.log(v.specialty);});
-
   }
   generateTable(sortArray);
 }
 
-function sortNeighborhood(e){
-  var pickedNeighborhood = neighborhoodDrop.options[neighborhoodDrop.selectedIndex].text;
-  if (pickedNeighborhood == "--"){
+function sortLocation(e){
+  var cpickedLocation = locationDrop.options[locationDrop.selectedIndex].text;
+  if (cpickedLocation == "--"){
     sortArray = profileList;
   } else {
-    sortArray = profileList.filter(function av(v){return v.neighborhood === pickedNeighborhood;});
+    sortArray = profileList.filter(function av(v){return v.location === cpickedLocation;});
   }
   generateTable(sortArray);
 }
 
-
-fbPerson.once("value", function(snapshot) {
-  snapshot.forEach(function(childSnapshot) {
-    profileList.push(JSON.parse(childSnapshot.val()));
+function storagePull(){
+  fbPerson.once("value", function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      profileList.push(JSON.parse(childSnapshot.val()));
+    });
+    generateTable(profileList);
+    var sortArray = [];
+    timeDrop.addEventListener('change', sortDay);
+    specialtyDrop.addEventListener('change', sortSpecialty);
+    locationDrop.addEventListener('change', sortLocation);
   });
-  generateTable(profileList);
-  var sortArray = [];
-  timeDrop.addEventListener('change', sortDay);
-  specialtyDrop.addEventListener('change', sortSpecialty);
-  neighborhoodDrop.addEventListener('change', sortNeighborhood);
+}
 
-});
+storagePull();
 

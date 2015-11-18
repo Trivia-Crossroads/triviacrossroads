@@ -1,9 +1,9 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 
-function NewProfile(name, email, neighborhood, day, specialty, other){
+function NewProfile(name, email, location, day, specialty, other){
   this.name = name;
   this.email = email;
-  this.neighborhood = neighborhood;
+  this.location = location;
   this.day = day;
   this.specialty = specialty;
   this.other = other;
