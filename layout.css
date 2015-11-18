@@ -63,7 +63,7 @@ h5 {
 }
 .header {
   background-color: silver;
-  border-radius: 5px;
+  border-radius: 10px 10px 0px 0px;
  /* padding-top: 10px;
   padding-left: 20px;*/
 }
@@ -82,8 +82,14 @@ h5 {
 }
 .footer {
   background-color: #36b0b6;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 0px 0px 10px 10px;
+  margin: 0px;
+  padding: 0px 15px 15px 0px;
+}
+
+.footer h5 {
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
 /* We rely on source order for mobile-first approach
  * in this case:
