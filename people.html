@@ -23,12 +23,18 @@
     </header>
     <article class="main">
       <div>
+        <div id="toggle">
+          <button type= "button" id="dayButton">Day</button>
+          <button type= "button" id="specialtyButton">Specialty</button>
+          <button type= "button" id="locationButton">Location</button>
+        </div>
+
         <fieldset id="filterbar">
           <legend>Filter By:</legend>
-          <label for="time">
+          <label for="day">
             Day of Week:
           </label>
-          <select name="time" id="time">
+          <select name="day" id="day" class="hidden">
             <option value="all">--</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -42,7 +48,7 @@
           <label for="specialty">
             Specialty:
           </label>
-            <select name="specialty" id="specialty">
+            <select name="specialty" id="specialty" class="hidden">
               <option value="all">--</option>
               <option value="Sports">Sports</option>
               <option value="Music">Music</option>
@@ -55,7 +61,7 @@
           <label for="location">
             Location:
           </label>
-          <select name="location" id="locations">
+          <select name="location" id="locations" class="hidden">
             <option value="all">--</option>
             <option value="Ballard">Ballard</option>
             <option value="Wallingford">Wallingford</option>
