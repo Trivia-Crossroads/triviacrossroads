@@ -1,4 +1,5 @@
 var dayFilter = document.getElementById('dayFilter');
+var locationFilter = document.getElementById('locations');
 function Event(name, location, day, time, fee){
   this.name = name;
   this.location = location;
@@ -54,6 +55,20 @@ function filterDay(event) {
  }
 }
 
+function filterlocation(event) {
+  var pickedLocation = locationFilter.options[locationFilter.selectedIndex].text;
+  if(pickedLocation === '--') {
+    makeTable(eventList)
+  } else {
+    var sortedArray = [];
+    sortedArray = eventList.filter(isEqualTo);
+    function isEqualTo(v) {
+      return v.location === pickedLocation
+    }
+    makeTable(sortedArray);
+ }
+}
+
 function makeTable(tableData) {
 
   var eventTable = document.getElementById('eventTable');
@@ -73,3 +88,4 @@ function makeTable(tableData) {
 }
 makeTable(eventList);
 dayFilter.addEventListener('change', filterDay);
+locationFilter.addEventListener('change', filterlocation);
