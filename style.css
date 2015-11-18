@@ -127,7 +127,7 @@ header h1 {
 }
 
 .highlight{
-  background-color: green;
+  background-color: #36b0b6;
 }
 
 tbody tr:nth-child(odd) {
@@ -144,7 +144,7 @@ tbody tr:nth-child(even) {
 }
 
 
-#eventPicture {
+#eventPicture, #peoplePicture {
   background-image: url('img/BallardLoft.jpg');
   background-size: cover;
   width: 100%;

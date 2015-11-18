@@ -29,6 +29,11 @@ h5 {
    margin: -12px;
 }
 
+#eventPicture, #peoplePicture {
+  display: flex;
+  justify-content: center;
+}
+
 #headlineImg {
   position: relative;
   top: 21px;
@@ -42,6 +47,14 @@ h5 {
   left: 40px;
   margin: -29px;
   margin-bottom: 30px;
+}
+
+#eventMain {
+  max-width: 600px;
+}
+
+#peopleMain {
+  max-width: 90%;
 }
 
 /* We tell all items to be 100% width */
