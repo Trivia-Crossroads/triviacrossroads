@@ -187,3 +187,7 @@ tbody tr:nth-child(even) {
   margin: 0%;
 }
 
+.about{
+  font-family: 'Questrial', sans-serif;
+}
+
