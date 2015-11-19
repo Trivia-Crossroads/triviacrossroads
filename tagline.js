@@ -38,7 +38,7 @@ var trivia = {
     "The average adult human brain has about 100 billion brain cells, with 100 trillion connections between them, but most people only use four or five.",
     "According to Google CEO Eric Shmidt, every two days humanity now creates as much information as we did from the dawn of civilization until 2003. On an unrelated note, Sturgeon\'s Law states that 90% of everything is crap.",
     "Dogs were promoted to Man\'s Best Friend after the previous best friend caused that unfortunate incident in Vegas. You know the one."
-    ];
+    ],
 
   buildIndex: function () {
     for (var i = 1; i < trivia.randomTrivia.length; i++) {
