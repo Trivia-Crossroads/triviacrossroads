@@ -1,9 +1,47 @@
-# triviacrossroads
-navbar code from /*http://cssmenumaker.com/menu/indented-horizontal-menu# I got this nav bar from cssmenumaker!*/
-<p>
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/ was used for the layout.css flex box, the flex box was applied to each invidvidual html page
+
+# Trivia Crossroads
+....................
+A meeting place for Trivia enthusiasts to find events and other likeminded people in Seattle.
+
+This is a final project for Code Fellows 201d1.
+
+November 2015
+Authored by:
+
+- Selena Flannery
+- Ivar Lee
+- Willie Richardson
+- Michael Sullivan
+- David Tolmie
+
+
+Trivia Crossroads is a website where one can go to find members for a Pub Trivia team.
+Additionally, the site lists local Pub Trivia events.
+
+When one enters their information (contact info, trivia specialty, and availability), their
+ details are stored in The Cloud™. They are then available for those needing a team member.
+
+![XKCD comic The Cloud](http://imgs.xkcd.com/comics/the_cloud.png)
+
+Users looking for team members can filter the list by availability (neighborhood or day) *-or-* specialty.
+
+Since user profiles are stored in the cloud, the data persists across time and space. :boom:
+
+
+Outside Resources
+..................
+The name *Trivia Crossroads* is based on the etymology of the word trivia, specifically: The word **trivia** comes from the Latin word **trivium**, meaning a meeting of three roads.
+
 Font style Handlee was applied
-Team members are Ivar Lee, David Tolme, Selena Flannery, Willie Richardson, and Michael Sullivan
-We have used HTML, CSS, Javascript, and Firebase for storage.
-Our project consisted of creating a website for finding trivia partners in the City of Seattle based on neighborhood, interests, and day of the week.  Moreoever, a list of Seattle Trivia Bar nights has also been included.
-Our project has five pages with three of these pages allowing for user input.
+
+Layout reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+navbar code from /*http://cssmenumaker.com/menu/indented-horizontal-menu# I got this nav bar from cssmenumaker!*/
+
+About Us page animation courtesy of Joshua Johnson -- http://designshack.net/articles/css/joshuajohnson-2/
+
+Font style Questrial was used via Google Fonts
+
+navbar code from: http://cssmenumaker.com/menu/indented-horizontal-menu
+
+Flexbox layout originally from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ It was later highly mofdified.

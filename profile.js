@@ -1,5 +1,6 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileData = document.getElementById("profileData");
+var UUID = '';
 
 function NewProfile(name, email, location, day, specialty, other){
   this.name = name;
@@ -21,8 +22,11 @@ var storeProfile = {
     var specialty = event.target.specialty.value;
     var comment = event.target.comment.value;
     var profileString = JSON.stringify(new NewProfile(name, email, location, time, specialty, comment));
-    var UUID = fbPerson.push(profileString);
-    document.cookie="UUID=" + UUID.key() + "; expires=Thu, 25 Dec 2020 12:00:00 UTC";
+    UUIDObject = fbPerson.push(profileString);
+    UUID = UUIDObject.key();
+    localStorage.setItem("triviaCrossroadsUUID", UUID);
+    var join = document.getElementById('join');
+    join.setAttribute('class', 'hidden');
   }
 }
 

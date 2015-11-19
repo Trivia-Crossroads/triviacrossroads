@@ -6,15 +6,26 @@ body {
 h5 {
   text-align: right;
 }
+
+#didyouknow {
+  background-color: Lightgray;
+  font-size: 20px;
+  margin: 10%;
+  border-radius: 8px;
+}
+
+#fun {
+  background-color: Lightgray;
+  font-size: 20px;
+  margin: 5%;
+  border-radius: 8px;
+}
+
 /*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 .wrapper {
   display: flex;
   flex-flow: row wrap;
 }
-
-/*#logo {
-  justify-content: flex-start;
-}*/
 
 #headline {
  /*  display: -webkit-flex;
@@ -29,6 +40,11 @@ h5 {
    margin: -12px;
 }
 
+#eventPicture, #peoplePicture {
+  display: flex;
+  justify-content: center;
+}
+
 #headlineImg {
   position: relative;
   top: 21px;
@@ -41,18 +57,41 @@ h5 {
   top: -27px;
   left: 40px;
   margin: -29px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
+#eventMain {
+  max-width: 600px;
+}
+
+#peopleMain {
+  max-width: 90%;
+}
+
+#aboutus{
+  width: 75%;
+  /*margin-right: 10%;*/
+}
+
+.people{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: 5%;
+}
+
+.about {
+  width: 275px;
+}
 /* We tell all items to be 100% width */
 .header, .main, .nav, .aside, .footer {
   flex: 1 100%;
 }
 .header {
   background-color: silver;
-  border-radius: 5px;
- /* padding-top: 10px;
-  padding-left: 20px;*/
+  border-radius: 10px 10px 0px 0px;
 }
 .main {
   font-weight: normal;
@@ -69,17 +108,15 @@ h5 {
 }
 .footer {
   background-color: #36b0b6;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 0px 0px 10px 10px;
+  margin: 0px;
+  padding: 0px 15px 15px 0px;
 }
-/* We rely on source order for mobile-first approach
- * in this case:
- * 1. header
- * 2. nav
- * 3. main
- * 4. aside
- * 5. footer
- */
+
+.footer h5 {
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
 
 /* Medium screens */
 @media all and (min-width: 600px) {

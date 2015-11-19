@@ -20,51 +20,51 @@
           <div id='cssmenu'>
             <ul>
                <li><a href='index.html'><span>Home</span></a></li>
-               <li><a href='about.html'><span>About</span></a></li>
                <li class='active'><a href='events.html'><span>Events</span></a></li>
                <li><a href='people.html'><span>People</span></a></li>
-               <li class='last'><a href='profile.html'><span>Sign Up</span></a></li>
+               <li ><a href='profile.html'><span>Sign Up</span></a></li>
+               <li class='last'><a href='about.html'><span>About Us</span></a></li>
             </ul>
           </div>
       </nav>
     </header>
 
-    <article class="main">
-        <h1>
-          Local Trivia Events
-          </h1>
-      <div id="toggle">
-        <button type="button" id="toggleDay">Day</button>
-        <button type="button" id="toggleLocation">Location</button>
+    <div id="eventPicture">
+        <article class="main" id="eventMain">
+            <h1>
+              Local Trivia Events
+              </h1>
+          <div id="toggle">
+            <button type="button" id="toggleDay">Day</button>
+            <button type="button" id="toggleLocation">Location</button>
+          </div>
+            <form id="filter">
+              <select name="dayFilter" id="dayFilter" class="hidden">
+                <option value="all">--</option>
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+              </select>
+              <select name="location" id="locations" class="hidden">
+                <option value="all">--</option>
+                <option value="Ballard">Ballard</option>
+                <option value="Wallingford">Wallingford</option>
+                <option value="Capitol Hill">Capitol Hill</option>
+                <option value="Lower Queen Anne">Lower Queen Anne</option>
+                <option value="University District">University District</option>
+                <option value="Anywhere">Anywhere in Seattle</option>
+              </select>
+            </form>
+            <div id="tableStyle">
+              <table id="eventTable">
+              </table>
+            </div>
+        </article>
       </div>
-        <form id="filter">
-          <select name="dayFilter" id="dayFilter" class="hidden">
-            <option value="all">--</option>
-            <option value="sunday">Sunday</option>
-            <option value="monday">Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thursday">Thursday</option>
-            <option value="friday">Friday</option>
-            <option value="saturday">Saturday</option>
-          </select>
-          <select name="location" id="locations" class="hidden">
-            <option value="all">--</option>
-            <option value="Ballard">Ballard</option>
-            <option value="Wallingford">Wallingford</option>
-            <option value="Capitol Hill">Capitol Hill</option>
-            <option value="Lower Queen Anne">Lower Queen Anne</option>
-            <option value="University District">University District</option>
-            <option value="Anywhere">Anywhere in Seattle</option>
-          </select>
-        </form>
-
-        <table id="eventTable">
-        </table>
-
-    </article>
-      <aside class="aside aside-1">Aside 1</aside>
-      <aside class="aside aside-2">Aside 2</aside>
       <footer class="footer">
         <h5>&copy; 2015 NSA ... We're watching you!</h5>
       </footer>
