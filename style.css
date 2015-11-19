@@ -180,3 +180,14 @@ tbody tr:nth-child(even) {
   margin: 0%;
 }
 
+#georgetownImage {
+  background-image: url('img/Georgetown.jpg');
+  background-size: cover;
+  width: 100%;
+  margin: 0%;
+}
+
+.about{
+  font-family: 'Questrial', sans-serif;
+}
+
