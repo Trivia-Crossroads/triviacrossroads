@@ -1,8 +1,8 @@
 # Trivia Crossroads
 
-This is a project for Code Fellows 201d1.
+This is a final project for Code Fellows 201d1.
 
-The team members are:
+The project team members are:
 
 - Selena Flannery
 - Ivar Lee
