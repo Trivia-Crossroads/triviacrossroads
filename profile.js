@@ -1,6 +1,5 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
-var profileData = document.getElementById("profileData");
-var UUID = '';
+var profileData = document.getElementById('profileData');
 
 function NewProfile(name, email, location, day, specialty, other){
   this.name = name;
@@ -14,6 +13,7 @@ function NewProfile(name, email, location, day, specialty, other){
 var storeProfile = {
   onSubmit: function(event) {
     event.preventDefault();
+    var response = document.getElementById('response');
     response.removeAttribute('class', 'hidden');
     var name = event.target.name.value;
     var email = event.target.email.value;
@@ -22,12 +22,10 @@ var storeProfile = {
     var specialty = event.target.specialty.value;
     var comment = event.target.comment.value;
     var profileString = JSON.stringify(new NewProfile(name, email, location, time, specialty, comment));
-    UUIDObject = fbPerson.push(profileString);
-    UUID = UUIDObject.key();
-    localStorage.setItem("triviaCrossroadsUUID", UUID);
+    fbPerson.push(profileString);
     var join = document.getElementById('join');
     join.setAttribute('class', 'hidden');
   }
-}
+};
 
-profileData.addEventListener("submit", storeProfile.onSubmit);
+profileData.addEventListener('submit', storeProfile.onSubmit);

@@ -7,6 +7,11 @@ h5 {
   text-align: right;
 }
 
+td{
+  max-width: 200px;
+}
+
+
 #didyouknow {
   background-color: white;
   font-size: 20px;
@@ -105,10 +110,6 @@ h5 {
   align-items: center;
   align-content: center;
   margin: 5%;
-}
-
-td{
-  max-width: 200px;
 }
 
 .about {

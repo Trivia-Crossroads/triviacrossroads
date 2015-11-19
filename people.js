@@ -1,12 +1,14 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileList = [];
+var sortArray = [];
 var dayDrop = document.getElementById('day');
 var specialtyDrop = document.getElementById('specialty');
 var locationDrop = document.getElementById('locations');
 var toggle = document.getElementById('toggle');
 
+
 var display = {
-   generateTable: function(dataArray){
+  generateTable: function(dataArray){
     var table = document.getElementById('profileDisplay');
     var tbody = document.createElement('tbody');
     for(var i = 0; i < dataArray.length; i++){
@@ -17,7 +19,7 @@ var display = {
         td.textContent = dataArray[i][j];
         tr.appendChild(td);
       }
-    tbody.appendChild(tr);
+      tbody.appendChild(tr);
     }
     table.appendChild(tbody);
     table.removeChild(tbody.previousSibling);
@@ -58,12 +60,11 @@ var display = {
   },
 
   storagePull: function(){
-    fbPerson.once("value", function(snapshot) {
+    fbPerson.once('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         profileList.push(JSON.parse(childSnapshot.val()));
       });
       display.generateTable(profileList);
-      var sortArray = [];
       dayDrop.addEventListener('change', sort.day);
       specialtyDrop.addEventListener('change', sort.specialty);
       locationDrop.addEventListener('change', sort.location);
@@ -74,7 +75,7 @@ var display = {
 var sort = {
   day: function(e){
     var pickedDay = dayDrop.options[dayDrop.selectedIndex].text;
-    if (pickedDay == "--"){
+    if (pickedDay == '--'){
       sortArray = profileList;
     } else {
       sortArray = profileList.filter(function av(v){return v.day === pickedDay;});
@@ -87,7 +88,7 @@ var sort = {
     if (pickedSpecialty === 'Sorcery, Phrenology, and Chiromancy') {
       pickedSpecialty = 'Sorcery';
     }
-    if (pickedSpecialty == "--"){
+    if (pickedSpecialty == '--'){
       sortArray = profileList;
     } else {
       sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
@@ -97,14 +98,14 @@ var sort = {
 
   location: function(e){
     var pickedLocation = locationDrop.options[locationDrop.selectedIndex].text;
-    if (pickedLocation == "--"){
+    if (pickedLocation == '--'){
       sortArray = profileList;
     } else {
       sortArray = profileList.filter(function av(v){return v.location === pickedLocation;});
     }
     display.generateTable(sortArray);
   }
-}
+};
 
 display.storagePull();
 toggle.addEventListener('click', display.togglePeople);
