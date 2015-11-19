@@ -15,7 +15,7 @@ var trivia = {
     "In a survey, married men revealed that they change their underwear twice as often as single men: so, about once a week.",
     "\"Stewardesses\" is the longest word that is typed with only the left hand, even though it\'s sexist.",
     "The ancient Code of Hammurabi decreed that bartenders who watered down beer would be executed; bartenders responded by inventing the fruity cocktail.",
-    "The American Psychiatric Asocial classifies careen withdrawal as a mental disorder, because obviously anyone who stops drinking coffee is nuts.",
+    "The American Psychiatric Association classifies caffeine withdrawal as a mental disorder, because obviously anyone who stops drinking coffee is nuts.",
     "The muppet Elmo is the only non-human to have testified before Congress. He was forced to admit under oath that he is insufferably annoying.",
     "The most shoplifted food item in the U.S. is candy; in Europe, it\'s cheese. Consequently European prisoners have better teeth but worse breath.",
     "Your cat does not really love you. He\'s just using you.",
