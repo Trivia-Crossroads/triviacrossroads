@@ -30,87 +30,90 @@
     </header>
 
     <article class="main">
-      <h1>Join Trivia Crossroads!</h1>
-      <form id="profileData" >
-        <fieldset>
-          <legend>
-            Contact Information:
-          </legend>
-          <label>
-            Name:
-            <input type="text" name="name" size="30" maxlength="25" required>
-          </label>
+      <div id="join">
+        <h1>Join Trivia Crossroads!</h1>
+        <form id="profileData" >
+          <fieldset>
+            <legend>
+              Contact Information:
+            </legend>
+            <label>
+              Name:
+              <input type="text" name="name" size="30" maxlength="25" required>
+            </label>
+            <br />
+            <label>
+              Email:
+              <input type="email" name="email" size="30" maxlength="30" required>
+            </label>
+            <br />
+          </fieldset>
           <br />
-          <label>
-            Email:
-            <input type="email" name="email" size="30" maxlength="30" required>
-          </label>
-          <br />
+          <fieldset>
+            <legend>
+              Availability:
+            </legend>
+            <p>
+            <label for="location">
+              Where would you like to play?
+            </label>
+            <select name="location" id="locations">
+              <option value="Ballard">Ballard</option>
+              <option value="Wallingford">Wallingford</option>
+              <option value="Capitol Hill">Capitol Hill</option>
+              <option value="Lower Queen Anne">Lower Queen Anne</option>
+              <option value="University District">University District</option>
+              <option value="Anywhere">Anywhere in Seattle</option>
+            </select>
+            <br />
+            <label for="time">
+              When are you available to play?
+            </label>
+            <select name="time" id="times">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+              <option value="Any">Any Night of the Week!</option>
+            </select>
+          </p>
         </fieldset>
-        <br />
         <fieldset>
           <legend>
-            Availability:
+            Trivia Speciality
           </legend>
           <p>
-          <label for="location">
-            Where would you like to play?
-          </label>
-          <select name="location" id="locations">
-            <option value="Ballard">Ballard</option>
-            <option value="Wallingford">Wallingford</option>
-            <option value="Capitol Hill">Capitol Hill</option>
-            <option value="Lower Queen Anne">Lower Queen Anne</option>
-            <option value="University District">University District</option>
-            <option value="Anywhere">Anywhere in Seattle</option>
-          </select>
+            <label for="specialty">
+              Do you have a trivia specialty?
+            </label>
+            <select name="specialty" id="specialties">
+              <option value="n/a">No, not really</option>
+              <option value="Sports">Sports</option>
+              <option value="Pop">Pop Culture</option>
+              <option value="Music">Music</option>
+              <option value="History">History</option>
+              <option value="Science">Science</option>
+              <option value="Sorcery">Sorcery, Phrenology, and Chiromancy</option>
+              <option value="Phenomenology">Phenomenology</option>
+              <option value="All">I am a master of all trivia domains!</option>
+            </select>
+          </p>
+          <p>
+            <label for="comment">
+              Would you like to add anything about yourself?
+            </label>
+            <br />
+            <textarea name="comment" rows="4" cols="40" maxlength="250" id="comments"></textarea>
+          </p>
           <br />
-          <label for="time">
-            When are you available to play?
-          </label>
-          <select name="time" id="times">
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-            <option value="Any">Any Night of the Week!</option>
-          </select>
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>
-          Trivia Speciality
-        </legend>
-        <p>
-          <label for="specialty">
-            Do you have a trivia specialty?
-          </label>
-          <select name="specialty" id="specialties">
-            <option value="n/a">No, not really</option>
-            <option value="Sports">Sports</option>
-            <option value="Pop">Pop Culture</option>
-            <option value="Music">Music</option>
-            <option value="History">History</option>
-            <option value="Science">Science</option>
-            <option value="Sorcery">Sorcery, Phrenology, and Chiromancy</option>
-            <option value="Phenomenology">Phenomenology</option>
-            <option value="All">I am a master of all trivia domains!</option>
-          </select>
-        </p>
-        <p>
-          <label for="comment">
-            Would you like to add anything about yourself?
-          </label>
+          <input type="submit" id="submit" value="Submit!"/>
           <br />
-          <textarea name="comment" rows="4" cols="40" maxlength="250" id="comments"></textarea>
-        </p>
-        <br />
-        <input type="submit" id="submit" value="Submit!"/>
-      </fieldset>
-    </form>
+        </fieldset>
+      </form>
+    </div>
     <div name="response" id="response" class="hidden">
       <h1>Thank You For Joining!</h1>
     </div>

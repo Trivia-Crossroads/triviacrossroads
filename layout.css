@@ -44,6 +44,11 @@ h5 {
    margin: -12px;
 }
 
+#eventPicture, #peoplePicture {
+  display: flex;
+  justify-content: center;
+}
+
 #headlineImg {
   position: relative;
   top: 21px;
@@ -56,7 +61,15 @@ h5 {
   top: -27px;
   left: 40px;
   margin: -29px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+}
+
+#eventMain {
+  max-width: 600px;
+}
+
+#peopleMain {
+  max-width: 90%;
 }
 
 /* We tell all items to be 100% width */
@@ -65,7 +78,7 @@ h5 {
 }
 .header {
   background-color: silver;
-  border-radius: 5px;
+  border-radius: 10px 10px 0px 0px;
  /* padding-top: 10px;
   padding-left: 20px;*/
 }
@@ -84,8 +97,14 @@ h5 {
 }
 .footer {
   background-color: #36b0b6;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 0px 0px 10px 10px;
+  margin: 0px;
+  padding: 0px 15px 15px 0px;
+}
+
+.footer h5 {
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
 /* We rely on source order for mobile-first approach
  * in this case:

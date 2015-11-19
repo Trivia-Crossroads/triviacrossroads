@@ -127,10 +127,24 @@ header h1 {
 }
 
 .highlight{
-  background-color: green;
+  background-color: #36b0b6;
 }
 
-#eventPicture {
+tbody tr:nth-child(odd) {
+  background: LightGray;
+}
+
+tbody tr:nth-child(even) {
+  background: Silver;
+}
+
+#tableStyle {
+  display: flex;
+  justify-content: center;
+}
+
+
+#eventPicture, #peoplePicture {
   background-image: url('img/BallardLoft.jpg');
   background-size: cover;
   width: 100%;
