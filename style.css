@@ -167,3 +167,9 @@ tbody tr:nth-child(even) {
   width: 100%;
   margin: 0%;
 }
+
+#filterbar{
+  border: none;
+  margin: 2%;
+}
+
