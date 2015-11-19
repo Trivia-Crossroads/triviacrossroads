@@ -21,7 +21,7 @@ Users looking for team members can filter the list by availability (neighborhood
 
 Since user profiles are stored in the cloud, the data persists across time and space. :boom:
 
-The name *Trivia Crossroads* is based on the etymology of the word trivia, specifically: *The word **trivia** comes from the Latin word **trivium**, meaning a meeting of three roads.*
+The name *Trivia Crossroads* is based on the etymology of the word trivia, specifically: The word **trivia** comes from the Latin word **trivium**, meaning a meeting of three roads.
 
 
 Font style Questrial was used via Google Fonts
