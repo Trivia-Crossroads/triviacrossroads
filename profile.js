@@ -1,5 +1,5 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
-var profileData = document.getElementById("profileData");
+var profileData = document.getElementById('profileData');
 var UUID = '';
 
 function NewProfile(name, email, location, day, specialty, other){
@@ -30,4 +30,4 @@ var storeProfile = {
   }
 }
 
-profileData.addEventListener("submit", storeProfile.onSubmit);
+profileData.addEventListener('submit', storeProfile.onSubmit);
