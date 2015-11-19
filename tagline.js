@@ -37,7 +37,7 @@ var trivia = {
     "Elephant seals can hold their breath for 100 minutes, and are not really elephants.",
     "The average adult human brain has about 100 billion brain cells, with 100 trillion connections between them, but most people only use four or five.",
     "According to Google CEO Eric Shmidt, every two days humanity now creates as much information as we did from the dawn of civilization until 2003. On an unrelated note, Sturgeon\'s Law states that 90% of everything is crap.",
-    "Dogs were promoted to Man\'s Best Friend after the previous best friend caused that unfortunate incident in Vegas. You know the one."
+    "Dogs were promoted to Man\'s Best Friend after the previous best friend caused that unfortunate incident in Vegas. You know the one.", "Godwin\'s Law states that as an internet discussion increases in length, the probability of a comparison to Hitler approaches 1.", "Do you know who else didn\'t like trivia? Hitler. That\'s right, we went there."
     ],
 
   buildIndex: function () {
