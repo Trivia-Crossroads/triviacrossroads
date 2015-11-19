@@ -84,8 +84,10 @@ h5 {
 }
 
 #aboutus{
-  width: 75%;
-  /*margin-right: 10%;*/
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 .people{
