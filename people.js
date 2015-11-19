@@ -1,9 +1,11 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
 var profileList = [];
+var sortArray = [];
 var dayDrop = document.getElementById('day');
 var specialtyDrop = document.getElementById('specialty');
 var locationDrop = document.getElementById('locations');
 var toggle = document.getElementById('toggle');
+
 
 var display = {
   generateTable: function(dataArray){
@@ -63,7 +65,6 @@ var display = {
         profileList.push(JSON.parse(childSnapshot.val()));
       });
       display.generateTable(profileList);
-      var sortArray = [];
       dayDrop.addEventListener('change', sort.day);
       specialtyDrop.addEventListener('change', sort.specialty);
       locationDrop.addEventListener('change', sort.location);
