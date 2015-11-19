@@ -20,7 +20,7 @@ When one enters their information (contact info, trivia specialty, and availabil
 The name *Trivia Crossroads* is based on the etymology of the word trivia, specifically: *The word **trivia** comes from the Latin word **trivium**, meaning a meeting of three roads.*
 
 
-Font style Handlee was applied
+Font style Questrial was used via Google Fonts
 
 navbar code from: http://cssmenumaker.com/menu/indented-horizontal-menu
 
