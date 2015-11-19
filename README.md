@@ -1,6 +1,6 @@
 
-# Trivia Crossroads
--------------------
+Trivia Crossroads
+=================
 
 A meeting place for Trivia enthusiasts to find events and other likeminded people in Seattle.
 
