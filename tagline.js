@@ -52,7 +52,6 @@ var trivia = {
     var m = array.length, t, i;
     while (m) {
       i = Math.floor(Math.random() * m--);
-      // console.log('i = ' + i);
       t = array[m];
       array[m] = array[i];
       array[i] = t;
