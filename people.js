@@ -58,7 +58,7 @@ var display = {
   },
 
   storagePull: function(){
-    fbPerson.once("value", function(snapshot) {
+    fbPerson.once('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         profileList.push(JSON.parse(childSnapshot.val()));
       });
@@ -74,7 +74,7 @@ var display = {
 var sort = {
   day: function(e){
     var pickedDay = dayDrop.options[dayDrop.selectedIndex].text;
-    if (pickedDay == "--"){
+    if (pickedDay == '--'){
       sortArray = profileList;
     } else {
       sortArray = profileList.filter(function av(v){return v.day === pickedDay;});
@@ -87,7 +87,7 @@ var sort = {
     if (pickedSpecialty === 'Sorcery, Phrenology, and Chiromancy') {
       pickedSpecialty = 'Sorcery';
     }
-    if (pickedSpecialty == "--"){
+    if (pickedSpecialty == '--'){
       sortArray = profileList;
     } else {
       sortArray = profileList.filter(function av(v){return v.specialty === pickedSpecialty;});
@@ -97,7 +97,7 @@ var sort = {
 
   location: function(e){
     var pickedLocation = locationDrop.options[locationDrop.selectedIndex].text;
-    if (pickedLocation == "--"){
+    if (pickedLocation == '--'){
       sortArray = profileList;
     } else {
       sortArray = profileList.filter(function av(v){return v.location === pickedLocation;});
