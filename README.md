@@ -2,7 +2,7 @@
 
 This is a project for Code Fellows 201d1.
 
-The team emembers are:
+The team members are:
 
 - Selena Flannery
 - Ivar Lee
