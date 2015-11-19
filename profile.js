@@ -13,6 +13,7 @@ function NewProfile(name, email, location, day, specialty, other){
 var storeProfile = {
   onSubmit: function(event) {
     event.preventDefault();
+    var response = document.getElementById('response');
     response.removeAttribute('class', 'hidden');
     var name = event.target.name.value;
     var email = event.target.email.value;
