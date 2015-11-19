@@ -16,8 +16,7 @@
   font-family: 'Lato', sans-serif;
 }
 #cssmenu {
-/*  border: 1px solid #133e40;
-*/  -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
