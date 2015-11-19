@@ -66,6 +66,9 @@ h5 {
 
 #peopleMain {
   max-width: 90%;
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
 }
 
 #aboutus{
@@ -80,6 +83,10 @@ h5 {
   align-items: center;
   align-content: center;
   margin: 5%;
+}
+
+td{
+  max-width: 200px;
 }
 
 .about {
