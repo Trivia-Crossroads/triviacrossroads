@@ -17,7 +17,7 @@ var display = {
         td.textContent = dataArray[i][j];
         tr.appendChild(td);
       }
-    tbody.appendChild(tr);
+      tbody.appendChild(tr);
     }
     table.appendChild(tbody);
     table.removeChild(tbody.previousSibling);
