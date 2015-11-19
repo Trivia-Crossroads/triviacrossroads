@@ -15,6 +15,11 @@ h5 {
   opacity: 10%;
 }
 
+#welcomeMessage{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
 #container {
   background-color: white;
   font-size: 20px;
