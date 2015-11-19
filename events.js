@@ -99,3 +99,4 @@ var eventObject =  {
 };
 eventObject.makeTable(eventList);
 toggle.addEventListener('click', eventObject.toggleEvents)
+
