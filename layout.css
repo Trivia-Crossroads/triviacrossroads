@@ -6,15 +6,11 @@ body {
 h5 {
   text-align: right;
 }
-/*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
 }
-
-/*#logo {
-  justify-content: flex-start;
-}*/
 
 #headline {
  /*  display: -webkit-flex;
@@ -44,6 +40,26 @@ h5 {
   margin-bottom: 30px;
 }
 
+#aboutus{
+  width: 75%;
+  /*margin-right: 10%;*/
+}
+
+.people{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: 5%;
+}
+
+.photo{
+}
+
+.about {
+  width: 275px;
+}
 /* We tell all items to be 100% width */
 .header, .main, .nav, .aside, .footer {
   flex: 1 100%;
@@ -51,8 +67,6 @@ h5 {
 .header {
   background-color: silver;
   border-radius: 5px;
- /* padding-top: 10px;
-  padding-left: 20px;*/
 }
 .main {
   font-weight: normal;
@@ -72,14 +86,6 @@ h5 {
   border-radius: 5px;
   margin: 5px;
 }
-/* We rely on source order for mobile-first approach
- * in this case:
- * 1. header
- * 2. nav
- * 3. main
- * 4. aside
- * 5. footer
- */
 
 /* Medium screens */
 @media all and (min-width: 600px) {
