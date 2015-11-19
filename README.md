@@ -17,7 +17,7 @@ When one enters their information (contact info, trivia specialty, and availabil
 
 ![XKCD comic The Cloud](http://imgs.xkcd.com/comics/the_cloud.png)
 
-Users looking for team members can filter the list by availability (neighborhood or day) or specialty.
+Users looking for team members can filter the list by availability (neighborhood or day) *-or-* specialty.
 
 Since user profiles are stored in the cloud, the data persists across time and space. :boom:
 
