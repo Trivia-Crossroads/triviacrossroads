@@ -8,10 +8,24 @@ h5 {
 }
 
 #didyouknow {
-  background-color: Lightgray;
+  background-color: white;
   font-size: 20px;
   margin: 10%;
   border-radius: 8px;
+  opacity: 10%;
+}
+
+#welcomeMessage{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+#container {
+  background-color: white;
+  font-size: 20px;
+  margin: 10%;
+  border-radius: 8px;
+  opacity: 10%;
 }
 
 #fun {
@@ -66,11 +80,22 @@ h5 {
 
 #peopleMain {
   max-width: 90%;
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+#signUpsheet {
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #aboutus{
-  width: 75%;
-  /*margin-right: 10%;*/
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 .people{
@@ -80,6 +105,10 @@ h5 {
   align-items: center;
   align-content: center;
   margin: 5%;
+}
+
+td{
+  max-width: 200px;
 }
 
 .about {
@@ -100,6 +129,7 @@ h5 {
   margin: 10px;
   min-width: 300px;
 }
+
 .aside {
   background-color: #36b0b6;
   border-radius: 5px;
@@ -131,8 +161,8 @@ h5 {
    */
   .main { flex: 2 0px; }
 
-  .aside-1 { order: 1; }
+  .section-1 { order: 1; }
   .main    { order: 2; }
-  .aside-2 { order: 3; }
+  .section-2 { order: 3; }
   .footer  { order: 4; }
 }
