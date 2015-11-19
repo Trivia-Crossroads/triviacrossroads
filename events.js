@@ -51,7 +51,7 @@ var eventObject =  {
     } else {
       var sortedArray = eventList.filter(function isEqualTo(v){return v.day === pickedDay});
       eventObject.makeTable(sortedArray);
-   }
+    }
   },
 
 
@@ -62,7 +62,7 @@ var eventObject =  {
     } else {
       var sortedArray = eventList.filter(function isEqualTo(v){return v.location === pickedLocation});
       eventObject.makeTable(sortedArray);
-   }
+    }
   },
 
   makeTable: function(tableData) {
