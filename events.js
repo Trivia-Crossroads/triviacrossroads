@@ -47,7 +47,7 @@ var eventObject =  {
   filterDay: function(event) {
     var pickedDay = dayFilter.options[dayFilter.selectedIndex].text;
     if(pickedDay === '--') {
-      eventObject.makeTable(eventList)
+      eventObject.makeTable(eventList);
     } else {
       var sortedArray = eventList.filter(function isEqualTo(v){return v.day === pickedDay});
       eventObject.makeTable(sortedArray);
@@ -58,7 +58,7 @@ var eventObject =  {
   filterlocation: function(event) {
     var pickedLocation = locationFilter.options[locationFilter.selectedIndex].text;
     if(pickedLocation === '--') {
-      eventObject.makeTable(eventList)
+      eventObject.makeTable(eventList);
     } else {
       var sortedArray = eventList.filter(function isEqualTo(v){return v.location === pickedLocation});
       eventObject.makeTable(sortedArray);
@@ -75,7 +75,7 @@ var eventObject =  {
         td.textContent = tableData[i][j];
         tr.appendChild(td);
       }
-    newTable.appendChild(tr);
+      newTable.appendChild(tr);
     }
     eventTable.appendChild(newTable);
     eventTable.removeChild(newTable.previousSibling);
@@ -98,5 +98,5 @@ var eventObject =  {
   }
 };
 eventObject.makeTable(eventList);
-toggle.addEventListener('click', eventObject.toggleEvents)
+toggle.addEventListener('click', eventObject.toggleEvents);
 

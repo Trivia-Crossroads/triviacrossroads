@@ -25,6 +25,6 @@ var storeProfile = {
     var join = document.getElementById('join');
     join.setAttribute('class', 'hidden');
   }
-}
+};
 
 profileData.addEventListener('submit', storeProfile.onSubmit);
