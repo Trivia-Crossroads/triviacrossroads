@@ -173,3 +173,10 @@ tbody tr:nth-child(even) {
   margin: 2%;
 }
 
+#westSeattlepicture {
+  background-image: url('img/CelticSwell.jpg');
+  background-size: cover;
+  width: 100%;
+  margin: 0%;
+}
+
