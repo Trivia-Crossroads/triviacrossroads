@@ -1,5 +1,5 @@
 var fbPerson = new Firebase('https://trivia-crossroads.firebaseio.com/Person');
-var profileData = document.getElementById('profileData');
+var $profileData = $('#profileData');
 
 function NewProfile(name, email, location, day, specialty, other){
   this.name = name;
@@ -11,21 +11,22 @@ function NewProfile(name, email, location, day, specialty, other){
 }
 
 var storeProfile = {
-  onSubmit: function(event) {
+  onSubmit: function() {
     event.preventDefault();
-    var response = document.getElementById('response');
-    response.removeAttribute('class', 'hidden');
-    var name = event.target.name.value;
-    var email = event.target.email.value;
-    var location = event.target.location.value;
-    var time = event.target.time.value;
-    var specialty = event.target.specialty.value;
-    var comment = event.target.comment.value;
+    var $response = $('#response');
+    $response.removeAttr('class', 'hidden');
+    var name = $('input[name="name"]').val();
+    var email = $('input[name="email"]').val();
+    var location = $('#locations option:selected').attr('value');
+    var time = $('#times option:selected').attr('value');
+    var specialty = $('#specialties option:selected').attr('value');
+    var comment = $('textarea[name="comment"]').val();
+
     var profileString = JSON.stringify(new NewProfile(name, email, location, time, specialty, comment));
     fbPerson.push(profileString);
-    var join = document.getElementById('join');
-    join.setAttribute('class', 'hidden');
+    var $join = $('#join');
+    $join.attr('class', 'hidden');
   }
 };
 
-profileData.addEventListener('submit', storeProfile.onSubmit);
+$profileData.on('submit', storeProfile.onSubmit);

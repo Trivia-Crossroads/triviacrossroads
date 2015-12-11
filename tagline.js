@@ -78,13 +78,10 @@ var trivia = {
     if (trivia.index.length === 0) {
       trivia.buildIndex();
     }
-    trivia.tagline = document.getElementById('tagline');
-    trivia.tagline.textContent = trivia.randomTrivia[trivia.index.pop()];
+    trivia.tagline = $('#tagline');
+    trivia.tagline.text(trivia.randomTrivia[trivia.index.pop()]);
     localStorage.index = JSON.stringify(trivia.index);
   },
 };
 
 trivia.randomFact();
-
-
-
