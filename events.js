@@ -43,7 +43,6 @@ var eventList = [
 ];
 
 var eventObject =  {
-
   filterDay: function(event) {
     var pickedDay = dayFilter.options[dayFilter.selectedIndex].text;
     if(pickedDay === '--') {
@@ -99,4 +98,3 @@ var eventObject =  {
 };
 eventObject.makeTable(eventList);
 toggle.addEventListener('click', eventObject.toggleEvents);
-
