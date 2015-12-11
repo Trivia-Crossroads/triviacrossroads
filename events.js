@@ -2,14 +2,12 @@ $(function() {
   var $dayFilter = $('#dayFilter');
   var $locationFilter = $('#locations');
   var $toggle = $('#toggle');
-
   var EventObject = function (name, location, day, time){
     this.name = name;
     this.location = location;
     this.day = day;
     this.time = time;
   };
-
   var eventList = [
     new EventObject('Blue Star Cafe & Pub', 'Wallingford', 'Monday', '8p'),
     new EventObject('Lost Lake', 'Capitol Hill', 'Monday', '8p'),
@@ -42,39 +40,42 @@ $(function() {
     new EventObject('The Ould Triangle', 'Greenwood', 'Thursday', '8:30p'),
     new EventObject('Earl\'s on the Ave', 'University District', 'Thursday', '9p'),
   ];
-
   var eventObject =  {
     filterDay: function(day) {
       var pickedDay = $dayFilter.find('option:selected').attr('value');
-      if(pickedDay === '--') {
+      if(pickedDay === 'all') {
         eventObject.makeTable(eventList);
       }
       else {
-        var sortedArray = eventList.filter(function isEqualTo(v){
-          return v.day.toLowerCase() === pickedDay.toLowerCase();
+        var sortedArray = eventList.filter(function isEqualTo(v) {
+          if (v.day === 'all') {
+            return true;
+          } else {
+            return v.day.toLowerCase() === pickedDay.toLowerCase();
+          }
         });
         eventObject.makeTable(sortedArray);
       }
     },
-
-
     filterLocation: function() {
       var pickedLocation = $locationFilter.find('option:selected').attr('value');
-      if(pickedLocation === '--') {
+      if(pickedLocation === 'all') {
         eventObject.makeTable(eventList);
       } else {
         var sortedArray = eventList.filter(function isEqualTo(v){
-          return v.location.toLowerCase() === pickedLocation.toLowerCase();
+          if (v.location === 'all') {
+            return true;
+          } else {
+            return v.location.toLowerCase() === pickedLocation.toLowerCase();
+          }
         });
         eventObject.makeTable(sortedArray);
       }
     },
-
     makeTable: function(tableData) {
       var $eventTable = $('#eventTable');
       var $newTable = $('<tbody class="eventTableBody">');
-
-      for(var i = 0; i < tableData.length; i++){
+      for(var i = 0; i < tableData.length; i++) {
         var $tr = $('<tr>');
         for(var j in tableData[i]){
           var $td = $('<td>');

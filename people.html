@@ -5,7 +5,7 @@
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascipt"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <link rel="icon" type="image/png" href="img/logo.png">
 </head>
@@ -38,13 +38,8 @@
         <div>
           <fieldset id="filterbar">
             <legend>Filter By:</legend>
-            <div id="toggle">
-              <button type= "button" id="dayButton">Day</button>
-              <button type= "button" id="specialtyButton">Specialty</button>
-              <button type= "button" id="locationButton">Location</button>
-            </div>
-            <select name="day" id="day" class="hidden">
-              <option value="all">--</option>
+            <select name="day" id="day">
+              <option value="all">All Days</option>
               <option value="Monday">Monday</option>
               <option value="Tuesday">Tuesday</option>
               <option value="Wednesday">Wednesday</option>
@@ -53,8 +48,8 @@
               <option value="Saturday">Saturday</option>
               <option value="Sunday">Sunday</option>
             </select>
-            <select name="specialty" id="specialty" class="hidden">
-              <option value="all">--</option>
+            <select name="specialty" id="specialty">
+              <option value="all">All Specialties</option>
               <option value="Sports">Sports</option>
               <option value="Music">Music</option>
               <option value="History">History</option>
@@ -62,8 +57,8 @@
               <option value="Sorcery">Sorcery, Phrenology, and Chiromancy</option>
               <option value="Phenomenology">Phenomenology</option>
             </select>
-            <select name="location" id="locations" class="hidden">
-              <option value="all">--</option>
+            <select name="location" id="locations">
+              <option value="all">All Locations</option>
               <option value="Ballard">Ballard</option>
               <option value="Wallingford">Wallingford</option>
               <option value="Capitol Hill">Capitol Hill</option>
@@ -73,16 +68,7 @@
           </fieldset>
         </div>
         <div id="tableStyle">
-          <table id="profileDisplay">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Neighborhood</th>
-                <th>Availability</th>
-                <th>Specialty</th>
-              </tr>
-            </thead>
+          <table id="profileTable">
           </table>
         </div>
       </article>
