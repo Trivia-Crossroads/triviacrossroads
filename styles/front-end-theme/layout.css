@@ -1,0 +1,50 @@
+.hidden{
+  display: none;
+}
+/*MORPH*/
+.morph {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+/*flexbox css and html scaffolding from https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.people{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: 5%;
+}
+.about {
+  width: 275px;
+}
+/* We tell all items to be 100% width */
+.header, .main, .nav, .aside, .footer {
+  flex: 1 100%;
+}
+.main {
+  margin: 10px;
+  min-width: 300px;
+}
+.section-2 {
+  margin:0 auto;
+}
+.aside {
+  margin: 5px;
+  max-width: 400px;
+}
+.footer {
+  margin: 0px;
+  padding: 0px 15px 15px 0px;
+}
+.footer h5 {
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
