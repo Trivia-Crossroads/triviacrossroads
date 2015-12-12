@@ -1,7 +1,0 @@
-Technical Requirements
-  -Use jQuery to update elements.
-  -The site should download a JSON file containing site data then create a SQL database that contains tables which contain relevant types of information.
-  -The site's forms' select options should populate based on the content available in the SQL database.
-  -The on pages displaying form filters, the form filters should use jQuery to update the table based on the returned results of generated SQL queries to the SQL database.
-  -Use Handlebars.js to create pages based on templates.
-  -Organize the site's styling according to SMACSS.

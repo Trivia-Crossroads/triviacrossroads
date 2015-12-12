@@ -8,6 +8,11 @@ This is a final project for Code Fellows 201d1.
 
 The name *Trivia Crossroads* is based on the etymology of the word trivia, specifically: The word **trivia** comes from the Latin word **trivium**, meaning a meeting of three roads.
 
+Updated 12/11/15 by
+-----------
+
+- Chris Lee
+- James Mason
 
 Authored by
 -----------
@@ -46,7 +51,3 @@ Flexbox layout originally from: https://css-tricks.com/snippets/css/a-guide-to-f
 navbar code from: http://cssmenumaker.com/menu/indented-horizontal-menu
 
 About Us page animation courtesy of Joshua Johnson -- http://designshack.net/articles/css/joshuajohnson-2/
-
-
-
-

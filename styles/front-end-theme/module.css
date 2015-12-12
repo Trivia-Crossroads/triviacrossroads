@@ -1,0 +1,171 @@
+#didyouknow {
+  margin: 10%;
+}
+#welcomeMessage{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+#container {
+  margin: 10%;
+}
+#fun {
+  margin: 5%;
+}
+/*http://cssmenumaker.com/menu/indented-horizontal-menu# I got this nav bar from cssmenumaker!*/
+/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+@charset "UTF-8";
+/* Base Styles */
+#alligncssmenu {
+  vertical-align: bottom;
+}
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+}
+#cssmenu {
+  width: auto;
+}
+#cssmenu ul {
+  padding: 5px 10px;
+}
+#cssmenu ul:before {
+  content: '';
+  display: block;
+}
+#cssmenu ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cssmenu li {
+  float: left;
+  margin: 0 5px 0 0;
+}
+#cssmenu li a {
+  padding: 8px 15px 9px 15px;
+  display: block;
+}
+#cssmenu li.active a {
+  display: block;
+}
+#cssmenu li:hover a {
+  display: block;
+}
+/*end of copied code for nav bar*/
+#tableStyle {
+  display: flex;
+  justify-content: center;
+}
+#eventPicture, #peoplePicture {
+  width: 100%;
+  margin: 0%;
+}
+#filterbar {
+  margin: 2%;
+}
+#westSeattlepicture {
+  width: 100%;
+  margin: 0%;
+}
+#georgetownImage {
+  width: 100%;
+  margin: 0%;
+}
+#headline {
+ /*  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   position: relative;
+   margin: -12px;
+}
+#eventPicture, #peoplePicture {
+  display: flex;
+  justify-content: center;
+}
+#headlineImg {
+  position: relative;
+  top: 21px;
+  left: -284px;
+  margin-bottom: 15px;
+}
+#headlineText {
+  position: relative;
+  top: -27px;
+  left: 40px;
+  margin: -29px;
+  margin-bottom: 0px;
+}
+#eventMain {
+  max-width: 600px;
+}
+#peopleMain {
+  max-width: 90%;
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+#signUpsheet {
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#aboutus{
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#headline {
+ /*  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   position: relative;
+   margin: -12px;
+}
+#eventPicture, #peoplePicture {
+  display: flex;
+  justify-content: center;
+}
+#headlineImg {
+  position: relative;
+  top: 21px;
+  left: -284px;
+  margin-bottom: 15px;
+}
+#headlineText {
+  position: relative;
+  top: -27px;
+  left: 40px;
+  margin: -29px;
+  margin-bottom: 0px;
+}
+#eventMain {
+  max-width: 600px;
+}
+#peopleMain {
+  max-width: 90%;
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+#signUpsheet {
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#aboutus{
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+}

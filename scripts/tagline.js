@@ -1,6 +1,4 @@
 var trivia = {
-  tagline: null,
-  index: [],
   randomTrivia: [
     'The word \'trivia\' comes from the Latin word \'trivium\', meaning a meeting of three roads.',
     'In the Middle Ages the \'trivium\' meant the curriculum of study comprising grammar, logic, and rhetoric.',
@@ -39,49 +37,19 @@ var trivia = {
     'According to Google CEO Eric Shmidt, every two days humanity now creates as much information as we did from the dawn of civilization until 2003. On an unrelated note, Sturgeon\'s Law states that 90% of everything is crap.',
     'Dogs were promoted to Man\'s Best Friend after the previous best friend caused that unfortunate incident in Vegas. You know the one.', 'Godwin\'s Law states that as an internet discussion increases in length, the probability of a comparison to Hitler approaches 1.', 'Do you know who else didn\'t like trivia? Hitler. That\'s right, we went there.'
   ],
-
-  buildIndex: function () {
-    for (var i = 1; i < trivia.randomTrivia.length; i++) {
-      trivia.index.push(i);
-    }
-    trivia.shuffle(trivia.index);
-    trivia.index.push('0');
-  },
-
-  shuffle: function (array) {
-    var m = array.length, t, i;
-    while (m) {
-      i = Math.floor(Math.random() * m--);
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-    return array;
-  },
-
-  setStoredIndex: function() {
-    localStorage.index = JSON.stringify(trivia.index);
-  },
-
-  getStoredIndex: function() {
-    if (localStorage.shuffledIndex) {
-      trivia.index = JSON.parse(localStorage.index);
-    } else {
-      trivia.buildIndex();
-    }
-  },
-
   randomFact: function () {
-    if (localStorage.index) {
-      trivia.index = JSON.parse(localStorage.index);
+    if (localStorage.getItem('randomFactIndex') !== null) {
+      var randomIndex = Math.floor(Math.random() * (trivia.randomTrivia.length - 1));
+      localStorage.setItem('randomFactIndex',randomIndex);
+      $('#tagline').text(trivia.randomTrivia[randomIndex]);
+    } else {
+      var randomIndex = localStorage.getItem('randomFactIndex');
+      while (randomIndex === localStorage.getItem('randomFactIndex')) {
+        randomIndex = Math.floor(Math.random() * (trivia.randomTrivia.length - 1));
+      }
+      localStorage.setItem('randomFactIndex',randomIndex);
+      $('#tagline').text(trivia.randomTrivia[randomIndex]);
     }
-    if (trivia.index.length === 0) {
-      trivia.buildIndex();
-    }
-    trivia.tagline = $('#tagline');
-    trivia.tagline.text(trivia.randomTrivia[trivia.index.pop()]);
-    localStorage.index = JSON.stringify(trivia.index);
-  },
+  }
 };
-
 trivia.randomFact();
