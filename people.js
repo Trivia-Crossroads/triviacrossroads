@@ -29,19 +29,28 @@ var display = {
       $dayDrop.on('change', sort.day);
       $specialtyDrop.on('change', sort.specialty);
       $locationDrop.on('change', sort.location);
+      webDB.init();
+      webDB.setupTables(profileList);
     });
   }
 };
 var sort = {
   day: function(e) {
     var pickedDay = $dayDrop.find('option:selected').attr('value');
+    $specialtyDrop.val('all');
+    $locationDrop.val('all');
     if (pickedDay == 'all') {
       sortArray = profileList;
-    } else {
+    }
+    else {
       sortArray = profileList.filter(function av(v) {
         if (v.day === 'all') {
           return true;
-        } else {
+        }
+        else if (typeof(v.day) === 'undefined') {
+          return false;
+        }
+        else {
           return v.day.toLowerCase() === pickedDay.toLowerCase();
         }
       });
@@ -50,13 +59,20 @@ var sort = {
   },
   specialty: function(e) {
     var pickedSpecialty = $specialtyDrop.find('option:selected').attr('value');
+    $dayDrop.val('all');
+    $locationDrop.val('all');
     if (pickedSpecialty == 'all') {
       sortArray = profileList;
-    } else {
+    }
+    else {
       sortArray = profileList.filter(function av(v) {
         if (v.specialty === 'all') {
           return true;
-        } else {
+        }
+        else if (typeof(v.specialty) === 'undefined') {
+          return false;
+        }
+        else {
           return v.specialty.toLowerCase() === pickedSpecialty.toLowerCase();
         }
       });
@@ -65,13 +81,20 @@ var sort = {
   },
   location: function(e) {
     var pickedLocation = $locationDrop.find('option:selected').attr('value');
+    $dayDrop.val('all');
+    $specialtyDrop.val('all');
     if (pickedLocation == 'all') {
       sortArray = profileList;
-    } else {
+    }
+    else {
       sortArray = profileList.filter(function av(v) {
         if (v.location === 'all') {
           return true;
-        } else {
+        }
+        else if (typeof(v.location) === 'undefined') {
+          return false;
+        }
+        else {
           return v.location.toLowerCase() === pickedLocation.toLowerCase();
         }
       });
@@ -80,4 +103,3 @@ var sort = {
   }
 };
 display.storagePull();
-display.generateTable(profileList);
